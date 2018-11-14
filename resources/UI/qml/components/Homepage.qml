@@ -29,7 +29,6 @@ Component {
                         anchors.fill: parent
 
                         Preview {
-
                         }
 
                     }
@@ -37,18 +36,17 @@ Component {
 
                 // New
                 ColumnLayout {
-                    //anchors.top: parent.children[0].bottom
-                    //anchors.topMargin: 0
-                    width: parent.parent.width
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.leftMargin: 24
+                    anchors.rightMargin: 24
+                    Layout.fillWidth: true
                     spacing: 0
 
                     RowLayout {
                         anchors.top: parent.top
                         anchors.topMargin: 0
-                        anchors.left: parent.left
-                        anchors.right: parent.right
-                        anchors.leftMargin: 24
-                        anchors.rightMargin: 24
+                        Layout.preferredWidth: parent.width
                         Layout.preferredHeight: 24
 
                         Text {
@@ -63,23 +61,21 @@ Component {
 
                         Rectangle {
                             anchors.right: parent.right
-                            Layout.preferredWidth: 248
+                            Layout.preferredWidth:120
                             Layout.fillHeight: true
                         }
                     }
 
                     SwipeView {
                         anchors.top: parent.children[0].bottom
-                        anchors.left: parent.left
-                        anchors.right: parent.right
-                        anchors.leftMargin: 24
-                        anchors.rightMargin: 24
                         anchors.topMargin: 24
+                        anchors.left: parent.left
+                        clip: true
                         Layout.fillWidth: true
-                        Layout.preferredHeight: 124
+                        Layout.preferredHeight: 200
+                        spacing: 0
 
                         SwipeItem {
-
                         }
 
                         SwipeItem {
