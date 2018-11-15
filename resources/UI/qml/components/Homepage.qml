@@ -90,6 +90,62 @@ Component {
 
                 }
 
+                // Most Popular
+                ColumnLayout {
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.leftMargin: 24
+                    anchors.rightMargin: 24
+                    Layout.fillWidth: true
+                    spacing: 0
+
+                    RowLayout {
+                        anchors.top: parent.top
+                        anchors.topMargin: 0
+                        Layout.preferredWidth: parent.width
+                        Layout.preferredHeight: 24
+
+                        Text {
+                            anchors.top: parent.top
+                            anchors.topMargin: 0
+                            topPadding: 0
+                            text: qsTr('MOST POPULAR')
+                            font.family: "Segoe UI"
+                            font.pixelSize: 24
+                            color: "#0069ff"
+                        }
+
+                        Rectangle {
+                            anchors.right: parent.right
+                            Layout.preferredWidth:120
+                            Layout.fillHeight: true
+                        }
+                    }
+
+                    SwipeView {
+                        anchors.top: parent.children[0].bottom
+                        anchors.topMargin: 24
+                        anchors.left: parent.left
+                        clip: true
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 200
+                        spacing: 0
+
+                        SwipeItem {
+                        }
+
+                        SwipeItem {
+
+                        }
+
+                        SwipeItem {
+
+                        }
+
+                    }
+
+                }
+
             }
 
         }

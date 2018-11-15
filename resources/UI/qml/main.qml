@@ -7,7 +7,7 @@ import "others"
 ApplicationWindow {
     visible: true
     width: 1324
-    height: 768
+    height: 720
     title: qsTr('Askhar Kumah - TechWay')
 
     Properties {
