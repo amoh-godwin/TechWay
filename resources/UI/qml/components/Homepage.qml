@@ -22,7 +22,7 @@ Component {
                 // Preview
                 Rectangle {
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 280
+                    Layout.preferredHeight: 320
                     color: "transparent"
 
                     SwipeView {

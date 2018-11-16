@@ -32,22 +32,84 @@ Rectangle {
             Rectangle {
                 width: parent.width
                 height: parent.height
-                color: "transparent"
+                color: "#44000000"
 
                 ColumnLayout {
                     anchors.fill: parent
 
-                    anchors.margins: 48
+                    anchors.leftMargin: 64
+                    anchors.rightMargin: 64
+                    anchors.topMargin: 64
                     width: parent.width
 
                     Text {
-                        text: qsTr('Lorem Ipsum')
+                        anchors.top: parent.top
+                        Layout.fillWidth: true
+                        font.family: "Uni Sans Heavy CAPS"
+                        font.pixelSize: 80
+                        wrapMode: Text.WordWrap
+                        lineHeight: .8
+                        text: qsTr('chicago fire Season 3')
                         color: "white"
                     }
 
-                    Rectangle {
-                        width: 50
-                        height: 50
+                    Text {
+                        anchors.top: parent.children[0].bottom
+                        anchors.topMargin: 16
+                        Layout.fillWidth: true
+                        text: qsTr('Proin eu augue vitae neque consectetur volutpat a ac nunc.'+
+                                   ' Nunc ac bibendum orci. Maecenas varius erat dolor,'+
+                                   ' condimentum aliquet diam commodo a. Aenean sit amet elit orci.'+
+                                   ' Quisque semper vehicula facilisis.')
+                        font.pixelSize: 12
+                        lineHeight: 1.2
+                        wrapMode: Text.WordWrap
+                        color: "white"
+                    }
+
+                    RowLayout {
+                        spacing: 124
+                        anchors.bottom: parent.bottom
+                        anchors.bottomMargin: 12
+
+                        Row {
+                            height: 24
+                            anchors.top: parent.top
+                            spacing: 16
+
+                            Text {
+                                anchors.verticalCenter: parent.verticalCenter
+                                text: qsTr('WATCH')
+                                color: "white"
+                                font.family: "Uni Sans Heavy CAPS"
+                                font.pixelSize: 14
+                            }
+
+                            PlayButton {
+                                text: "\uE768"
+                            }
+
+                        }
+
+                        Row {
+                            height: 24
+                            anchors.top: parent.top
+                            spacing: 16
+
+                            Text {
+                                anchors.verticalCenter: parent.verticalCenter
+                                text: qsTr('in turn')
+                                color: "white"
+                                font.family: "Uni Sans Heavy CAPS"
+                                font.pixelSize: 14
+                            }
+
+                            PlayButton {
+                                text: "\uE109"
+                            }
+
+                        }
+
                     }
 
                 }
@@ -58,7 +120,7 @@ Rectangle {
 
         // Controls
         Rectangle {
-            Layout.preferredWidth: 150
+            Layout.preferredWidth: 152
             Layout.fillHeight: true
 
             // background
