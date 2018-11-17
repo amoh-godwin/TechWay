@@ -8,7 +8,7 @@ Rectangle {
     height: parent.height
 
     property url cover_image: settings.user_folder + 'clouds.jpg'
-    property url side_image: settings.user_folder + 'nature.jpg'
+    property url side_image: settings.user_folder + 'ecff7_c.jpg'
 
     RowLayout {
         width: parent.width
