@@ -31,21 +31,56 @@ ApplicationWindow {
                 spacing: 0
                 height: parent.height
 
-                // Nav Icons
-                ToolBar {
-                    id: small_nav
+                Rectangle {
                     Layout.preferredWidth: 50
                     Layout.fillHeight: true
+                    color: "#121316"
 
-                    background: Rectangle {
-                        color: "#121316"
+                    // border
+                    Rectangle {
+                        anchors.right: parent.right
+                        width: 2
+                        height: parent.parent.height
+                        color: "#0069ff"
+                    }
 
-                        // border
+                    ColumnLayout {
+                        width: 48
+                        height: parent.height
+
                         Rectangle {
-                            anchors.right: parent.right
-                            width: 2
-                            height: parent.parent.height
-                            color: "#0069ff"
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: 80
+                            color: "transparent"
+
+                            Text {
+                                text: 'T.'
+                                font.family: "Uni Sans Heavy CAPS"
+                                color: "white"
+                            }
+
+                        }
+
+                        // Nav Icons
+                        ToolBar {
+                            id: small_nav
+                            Layout.preferredWidth: 48
+                            Layout.fillHeight: true
+
+                            background: Rectangle {
+                                color: "#121316"
+                            }
+
+                            ColumnLayout {
+                                width: parent.width
+                            }
+
+                        }
+
+                        Rectangle {
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: 200
+                            color: "transparent"
                         }
 
                     }
